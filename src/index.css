@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #05050f;
+  color: white;
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
