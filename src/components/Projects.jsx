@@ -8,8 +8,6 @@ import todoImg from "../assets/projects/todolist.png";
 import movieSearchImg from "../assets/projects/moviesearch.png";
 import expenseImg from "../assets/projects/expensetracker.png";
 
-
-
 const Projects = () => {
   const projectsRef = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -22,10 +20,10 @@ const Projects = () => {
         "A responsive Netflix-inspired website with a modern UI, movie sections and smooth user experience.",
       image: netflixImg,
       tags: ["HTML", "CSS", "JavaScript"],
-       live: "https://portfolio-94.onrender.com/pages/netflix.html",
+      live: "https://portfolio-94.onrender.com/pages/netflix.html",
       github: "#",
     },
-     {
+    {
       number: "02",
       title: "Todo List",
       description:
@@ -36,8 +34,6 @@ const Projects = () => {
       github: "#",
     },
 
-
-   
     {
       number: "03",
       title: "Tic Tac Toe",
@@ -48,7 +44,7 @@ const Projects = () => {
       live: "https://portfolio-94.onrender.com/pages/tictactoe.html",
       github: "#",
     },
-     {
+    {
       number: "04",
       title: "Currency Converter",
       description:
@@ -59,8 +55,6 @@ const Projects = () => {
       github: "#",
     },
 
-
-   
     {
       number: "05",
       title: "Movie Search",
@@ -77,7 +71,7 @@ const Projects = () => {
       title: "Expense Tracker",
       description:
         "A React-based expense management application for tracking income, expenses and overall balance.",
-      image:expenseImg ,
+      image: expenseImg,
       tags: ["React", "JavaScript", "LocalStorage"],
       live: "#",
       github: "#",
@@ -105,7 +99,7 @@ const Projects = () => {
       },
       {
         threshold: 0.12,
-      }
+      },
     );
 
     if (projectsRef.current) {
@@ -116,13 +110,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <section
-      className="projects-section"
-      id="projects"
-      ref={projectsRef}
-    >
+    <section className="projects-section" id="projects" ref={projectsRef}>
       <div className="projects-container">
-
         {/* Heading */}
 
         <div className={`projects-heading ${visible ? "show" : ""}`}>
@@ -132,8 +121,8 @@ const Projects = () => {
             <h2>Featured Projects</h2>
 
             <p>
-              A collection of projects I've built using modern
-              web technologies, APIs and React.
+              A collection of projects I've built using modern web technologies,
+              APIs and React.
             </p>
           </div>
 
@@ -143,33 +132,24 @@ const Projects = () => {
           </div>
         </div>
 
-
         {/* Projects */}
 
         <div className="projects-grid">
-
           {projects.map((project, index) => (
             <div
-              className={`project-card ${
-                visible ? "show" : ""
-              }`}
+              className={`project-card ${visible ? "show" : ""}`}
               key={project.title}
               style={{
                 "--delay": `${index * 0.12}s`,
               }}
             >
-
               {/* Number */}
 
-              <div className="project-number">
-                {project.number}
-              </div>
-
+              <div className="project-number">{project.number}</div>
 
               {/* Image */}
 
               <div className="project-image-wrapper">
-
                 <img
                   src={project.image}
                   alt={project.title}
@@ -178,45 +158,34 @@ const Projects = () => {
 
                 <div className="project-image-overlay">
                   <a
-  href={project.live}
-  target="_blank"
-  rel="noreferrer"
-  className="project-image-overlay"
->
-  <span>VIEW PROJECT ↗</span>
-</a>
-                  
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-image-overlay"
+                  >
+                    <span>VIEW PROJECT ↗</span>
+                  </a>
                 </div>
-
               </div>
-
 
               {/* Content */}
 
               <div className="project-content">
-
                 <h3>{project.title}</h3>
 
                 <p>{project.description}</p>
 
-
                 {/* Tags */}
 
                 <div className="project-tags">
-
                   {project.tags.map((tag) => (
-                    <span key={tag}>
-                      {tag}
-                    </span>
+                    <span key={tag}>{tag}</span>
                   ))}
-
                 </div>
-
 
                 {/* Buttons */}
 
                 <div className="project-buttons">
-
                   <a
                     href={project.live}
                     target="_blank"
@@ -236,27 +205,17 @@ const Projects = () => {
                     GitHub
                     <span>↗</span>
                   </a>
-
                 </div>
-
               </div>
-
             </div>
           ))}
-
         </div>
-
 
         {/* Bottom */}
 
-        <div
-          className={`projects-footer ${
-            visible ? "show" : ""
-          }`}
-        >
+        <div className={`projects-footer ${visible ? "show" : ""}`}>
           <span>MORE PROJECTS COMING SOON</span>
         </div>
-
       </div>
     </section>
   );

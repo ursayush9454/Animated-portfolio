@@ -1,0 +1,254 @@
+/* ================================
+   CUSTOM HEART CURSOR
+================================ */
+
+body {
+  cursor: none;
+}
+
+/* Main cursor wrapper */
+.heart-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+
+  pointer-events: none;
+
+  z-index: 999999;
+
+  will-change: transform;
+}
+
+/* ================================
+   ACTUAL HEART
+================================ */
+
+.heart-shape {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  top: 3px;
+  left: 3px;
+
+  background: #ff2d75;
+
+  transform: rotate(-45deg);
+
+  border-radius: 4px;
+
+  filter:
+    drop-shadow(0 0 4px #ff2d75)
+    drop-shadow(0 0 10px rgba(255, 45, 117, 0.8));
+}
+
+/* Left round part */
+.heart-shape::before {
+  content: "";
+
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  top: -9px;
+  left: 0;
+
+  background: #ff2d75;
+
+  border-radius: 50%;
+}
+
+/* Right round part */
+.heart-shape::after {
+  content: "";
+
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  top: 0;
+  left: 9px;
+
+  background: #ff2d75;
+
+  border-radius: 50%;
+}
+
+/* ================================
+   GLOW
+================================ */
+
+.heart-cursor-glow {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 45, 117, 0.13);
+
+  filter: blur(12px);
+
+  pointer-events: none;
+
+  z-index: 999998;
+
+  will-change: transform;
+}
+/* =================================
+   CLICK HEART EXPLOSION
+================================= */
+
+.heart-burst {
+  position: fixed;
+
+  width: 1px;
+  height: 1px;
+
+  pointer-events: none;
+
+  z-index: 1000000;
+}
+
+/* Mini hearts */
+
+.mini-heart {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  color: #ff2d75;
+
+  font-size: 14px;
+
+  opacity: 0;
+
+  transform: translate(-50%, -50%) scale(0);
+
+  filter:
+    drop-shadow(0 0 4px #ff2d75)
+    drop-shadow(0 0 8px rgba(255, 45, 117, 0.7));
+
+  animation: miniHeartExplosion 0.9s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+}
+
+/* Different directions */
+
+.h1 {
+  --x: -42px;
+  --y: -38px;
+}
+
+.h2 {
+  --x: 0px;
+  --y: -52px;
+}
+
+.h3 {
+  --x: 42px;
+  --y: -38px;
+}
+
+.h4 {
+  --x: 52px;
+  --y: 5px;
+}
+
+.h5 {
+  --x: 35px;
+  --y: 43px;
+}
+
+.h6 {
+  --x: 0px;
+  --y: 55px;
+}
+
+.h7 {
+  --x: -38px;
+  --y: 42px;
+}
+
+.h8 {
+  --x: -52px;
+  --y: 5px;
+}
+
+
+/* Explosion animation */
+
+@keyframes miniHeartExplosion {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0);
+  }
+
+  20% {
+    opacity: 1;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate(
+        calc(-50% + var(--x)),
+        calc(-50% + var(--y))
+      )
+      scale(0.65);
+  }
+}
+
+/* ================================
+   CLICKABLE ELEMENTS
+================================ */
+
+a,
+button,
+input,
+textarea,
+select {
+  cursor: none;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+
+  .heart-cursor,
+  .heart-cursor-glow {
+    display: none;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: auto;
+  }
+}

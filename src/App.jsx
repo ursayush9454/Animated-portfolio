@@ -10,9 +10,18 @@ import Footer from "./components/Footer";
 import { useState } from "react";
 import React from "react";
 import { useEffect } from "react";
+import HeartCursor from "./components/HeartCursor";
+import LoadingScreen from "./components/LoadingScreen";
 const App = () => {
+  const [loading,setLoading]=useState(true)
   return (
     <>
+    {loading && (
+        <LoadingScreen
+          onComplete={() => setLoading(false)}
+        />
+      )}
+    <HeartCursor/>
       <Navbar />
       <Hero />
       <About />
