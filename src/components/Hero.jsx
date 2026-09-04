@@ -82,6 +82,7 @@ function Hero() {
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhadhauriyaayush@gmail.com#" aria-label="Email" target="_blank">
             Email
           </a>
+          <a href="https://www.linkedin.com/in/ayush-bhadauriya-a3aa093a9/" aria-label="linkedin" target="_blank" >Linkedin</a>
         </motion.div>
       </motion.div>
 

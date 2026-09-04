@@ -76,7 +76,7 @@ const Contact = () => {
               GitHub
             </a>
 
-            <a href="#" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/ayush-bhadauriya-a3aa093a9/" target="_blank" rel="noreferrer">
               LinkedIn
             </a>
 
