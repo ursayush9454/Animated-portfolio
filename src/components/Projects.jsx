@@ -7,14 +7,26 @@ import ticTacToeImg from "../assets/projects/tictactoe.png";
 import todoImg from "../assets/projects/todolist.png";
 import movieSearchImg from "../assets/projects/moviesearch.png";
 import expenseImg from "../assets/projects/expensetracker.png";
-
+import Shopify from "../assets/projects/Shopify.png"
 const Projects = () => {
   const projectsRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
   const projects = [
-    {
+     {
       number: "01",
+      title: "Shpify-E-Commerce",
+      description:
+        "A full-stack e-commerce website built with React.js, Node.js, Express.js, and MongoDB featuring authentication, product management, cart, checkout, and order placement with a responsive and modern UI",
+      image:  Shopify,
+      tags: ["React", "Node.js","Express.js","MangoDB"],
+      live: "https://e-commerce-shopify-lktl.onrender.com/",
+      github: "#",
+    },
+   
+
+    {
+      number: "02",
       title: "Netflix Clone",
       description:
         "A responsive Netflix-inspired website with a modern UI, movie sections and smooth user experience.",
@@ -24,7 +36,7 @@ const Projects = () => {
       github: "#",
     },
     {
-      number: "02",
+      number: "03",
       title: "Todo List",
       description:
         "A simple and interactive task management application for adding, completing and deleting daily tasks.",
@@ -35,7 +47,7 @@ const Projects = () => {
     },
 
     {
-      number: "03",
+      number: "04",
       title: "Tic Tac Toe",
       description:
         "A classic two-player Tic Tac Toe game with interactive gameplay and win detection logic.",
@@ -45,7 +57,7 @@ const Projects = () => {
       github: "#",
     },
     {
-      number: "04",
+      number: "05",
       title: "Currency Converter",
       description:
         "A real-time currency converter that allows users to convert currencies with a simple and clean interface.",
@@ -56,7 +68,7 @@ const Projects = () => {
     },
 
     {
-      number: "05",
+      number: "06",
       title: "Movie Search",
       description:
         "A movie search application that fetches movie information dynamically through an external API.",
@@ -67,7 +79,7 @@ const Projects = () => {
     },
 
     {
-      number: "06",
+      number: "07",
       title: "Expense Tracker",
       description:
         "A React-based expense management application for tracking income, expenses and overall balance.",
@@ -78,7 +90,7 @@ const Projects = () => {
     },
 
     {
-      number: "07",
+      number: "08",
       title: "Kanban Board",
       description:
         "A React task management board that helps organize tasks into different workflow columns.",
@@ -127,7 +139,7 @@ const Projects = () => {
           </div>
 
           <div className="projects-count">
-            <strong>07</strong>
+            <strong>08</strong>
             <span>Projects Built</span>
           </div>
         </div>

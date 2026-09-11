@@ -210,12 +210,13 @@
 
   font-weight: 700;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     #60a5fa,
     #a78bfa,
-    #f472b6
-  );
+    #f472b6 
+  );*/
+  color: white;
 
  
   -webkit-text-fill-color: transparent;

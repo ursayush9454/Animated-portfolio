@@ -49,11 +49,11 @@ const Experience = () => {
     },
     {
       year: "2026 - Present",
-      role: "Frontend Developer",
+      role: "Mern Stack Developer",
       company: "Defeic Digital ",
       description:
         "Created and customized website templates while working on responsive designs and frontend components.",
-      skills: ["HTML", "CSS", "JavaScript","React ","TalvindCss"],
+      skills: ["React ","TalvindCss","Node.js","Express.js","MangoDB"],
     },
 
   ];
